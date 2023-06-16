@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        border: solid 3px white;
+        margin: 20px;
+        height: 500px;
+        width: 30%;
+        background-color: white;
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        background-color: white;
+      }
+      .child {
+        border: solid 3px white;
+        height: 200px;
+        background-color: black;
+        width: 50%;
+       
+      }
+      .parent:hover .child {
+        animation: iright 1s ease-in forwards;
+      }
+      @keyframes iright {
+        0% {
+          transform: translateX(0%);
+        }
+        33% {
+          transform: translateY(100%);
+        }
+        66% {
+          transform: translateX(100%) translateY(100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <img src="circle.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
